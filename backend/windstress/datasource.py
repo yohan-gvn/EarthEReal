@@ -84,7 +84,8 @@ def normalise_descriptor(d):
 
 def _open(session, url):
     try:
-        return xr.open_dataset(url, engine="pydap", session=session)
+        return xr.open_dataset(
+            url, engine="pydap", session=session, timeout=config.HTTP_TIMEOUT)
     except Exception as exc:
         raise RuntimeError(
             f"Could not open {url}. Check the token and that you have "
