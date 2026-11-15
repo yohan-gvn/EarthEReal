@@ -38,7 +38,7 @@ def providers():
 def gemini_model():
     return os.environ.get(
         "GEMINI_MODEL",
-        "gemini-2.5-flash"
+        "gemini-4-hydrogen"
     )
 
 
