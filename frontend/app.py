@@ -39,6 +39,71 @@ html, body, [class*="css"] { font-family: 'Inter', sans-serif; }
 [data-testid="stSidebar"] { background-color: #0c1929; border-right: 1px solid #1b3045; }
 [data-testid="stHeader"] { background-color: transparent; }
 .block-container { padding-top: 1.5rem; padding-bottom: 3rem; max-width: 1700px; }
+
+/* ---------- Readable text everywhere ---------- */
+.stApp h1, .stApp h2, .stApp h3, .stApp h4, .stApp h5, .stApp h6,
+.stApp p, .stApp li, .stApp span, .stApp label, .stApp div,
+[data-testid="stMarkdownContainer"],
+[data-testid="stMarkdownContainer"] p,
+[data-testid="stMarkdownContainer"] li,
+[data-testid="stWidgetLabel"],
+[data-testid="stWidgetLabel"] p,
+[data-testid="stSidebar"] *,
+[data-testid="stRadio"] label,
+[data-testid="stCheckbox"] label,
+[data-testid="stExpander"] summary,
+[data-testid="stExpander"] summary p {
+  color: #e5edf7;
+}
+
+/* Secondary / muted text */
+[data-testid="stCaptionContainer"],
+[data-testid="stCaptionContainer"] p,
+.stCaption, small { color: #8ca3bb !important; }
+
+/* Metrics (st.metric) */
+[data-testid="stMetricLabel"], [data-testid="stMetricLabel"] p { color: #8ca3bb !important; }
+[data-testid="stMetricValue"] { color: #e5edf7 !important; }
+
+/* Inputs, selects, multiselects */
+input, textarea,
+[data-baseweb="select"] > div,
+[data-baseweb="input"] > div,
+[data-baseweb="textarea"] > div {
+  background-color: #10253a !important;
+  color: #e5edf7 !important;
+  border-color: #1d3a50 !important;
+}
+[data-baseweb="select"] span, [data-baseweb="select"] div { color: #e5edf7 !important; }
+[data-baseweb="select"] svg { fill: #8ca3bb !important; }
+[data-baseweb="popover"] ul, [data-baseweb="menu"] { background-color: #0c1c2e !important; }
+[data-baseweb="popover"] li, [data-baseweb="menu"] li { color: #e5edf7 !important; }
+[data-baseweb="popover"] li:hover { background-color: #173b40 !important; }
+[data-baseweb="tag"] { background-color: #173b40 !important; }
+[data-baseweb="tag"] span { color: #48e0cf !important; }
+input::placeholder, textarea::placeholder { color: #6b829a !important; }
+
+/* Tabs */
+[data-baseweb="tab-list"] button p { color: #8ca3bb !important; }
+[data-baseweb="tab-list"] button[aria-selected="true"] p { color: #22d3c5 !important; }
+
+/* Buttons */
+.stButton > button, .stDownloadButton > button {
+  background-color: #10253a; color: #e5edf7; border: 1px solid #1d3a50;
+}
+.stButton > button:hover { border-color: #22d3c5; color: #22d3c5; }
+
+/* Dataframes / tables */
+[data-testid="stDataFrame"], [data-testid="stTable"] table, [data-testid="stTable"] td, [data-testid="stTable"] th {
+  color: #e5edf7 !important;
+}
+
+/* Slider values */
+[data-testid="stSlider"] [data-testid="stTickBarMin"],
+[data-testid="stSlider"] [data-testid="stTickBarMax"],
+[data-testid="stSlider"] div[data-baseweb="slider"] div { color: #e5edf7 !important; }
+
+/* Your custom classes (unchanged) */
 .brand { font-size: 28px; font-weight: 800; letter-spacing: -1px; color: #e5edf7; }
 .brand span { color: #22d3c5; }
 .subtitle { color: #8ca3bb; font-size: 13px; margin-top: 3px; }
